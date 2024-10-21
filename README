@@ -1,0 +1,55 @@
+README: T20 World Cup Batting Summary
+Overview
+This file contains the batting performance summaries from the T20 World Cup, including detailed statistics for individual players across various matches. The data captures crucial aspects of each player’s batting performance such as runs scored, balls faced, strike rate, boundaries hit, and dismissal details for every match.
+
+File Structure
+-Format: JSON
+-Key Elements:
+-battingSummary: Contains an array of batting summaries for different matches.
+-match: The teams involved in each match (e.g., "Namibia Vs Sri Lanka").
+-teamInnings: The innings being described (e.g., "Namibia" or "Sri Lanka").
+-batsmanName: The name of the batsman.
+-dismissal: How the batsman got out (if applicable).
+-runs: The number of runs scored by the batsman.
+-balls: The number of balls faced.
+-4s: The number of fours hit by the batsman.
+-6s: The number of sixes hit by the batsman.
+-SR: Strike Rate (calculated as runs/balls * 100).
+Usage
+1.Requirements:
+
+A text editor or JSON viewer to open the .json file.
+Python, R, or any other tool for parsing and analyzing JSON data.
+2.Loading the Data: In Python, for instance, the JSON data can be loaded as follows:
+  import json
+
+with open('t20_wc_batting_summary.json', 'r') as file:
+    data = json.load(file)
+3.Sample Structure: Each match summary is contained in the battingSummary array, with detailed performance stats for each batsman. Here's a sample entry:
+{
+    "match": "Namibia Vs Sri Lanka",
+    "teamInnings": "Namibia",
+    "battingPos": 1,
+    "batsmanName": "Michael van Lingen",
+    "dismissal": "c Pramod Madushan b Chameera",
+    "runs": "3",
+    "balls": "6",
+    "4s": "0",
+    "6s": "0",
+    "SR": "50.00"
+}
+
+Key Features
+Batting Performance: Captures detailed information for each batsman in every match.
+Dismissal Information: Provides details on how the batsman was dismissed.
+Strike Rate: Highlights the efficiency of each batsman, a critical stat in T20 cricket.
+Boundary Count: Includes counts of 4s and 6s hit by each batsman.
+Use Cases
+Statistical Analysis: Analyze player performance across different matches.
+Match Reports: Generate match summaries based on individual performances.
+Performance Trends: Compare batsmen’s strike rates, boundary counts, and consistency across the tournament.
+Customization
+This dataset can be expanded by:
+
+Adding additional fields, such as team scores, overs played, or weather conditions.
+Integrating with bowling or fielding data to generate a complete match analysis.
